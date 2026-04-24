@@ -5,6 +5,9 @@
 @import 'layout/header';
 @import 'layout/footer';
 
+// Components
+@import 'components/product-card';
+
 // Pages
 @import 'pages/homepage';
 @import 'pages/product';
@@ -17,7 +20,6 @@ body {
   line-height: 1.5;
 }
 
-// Utility overrides
 a {
   text-decoration: none;
 }
