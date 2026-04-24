@@ -1,25 +1,49 @@
 @import 'variables';
+
+/* --- Import Google Fonts & Icons --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 @import '~bootstrap/scss/bootstrap';
 
-// Layout
+/* --- Layout --- */
 @import 'layout/header';
 @import 'layout/footer';
 
-// Components
+/* --- Components --- */
 @import 'components/product-card';
 
-// Pages
+/* --- Pages --- */
 @import 'pages/homepage';
 @import 'pages/product';
 
-// Base
+/* --- Global Base Styles --- */
 body {
-  font-family: var(--font-sans);
+  font-family: 'Inter', var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.5;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
-a {
-  text-decoration: none;
+a { 
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+// Material Icons override
+.material-icons {
+  vertical-align: middle;
+  font-size: inherit;
 }

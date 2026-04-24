@@ -1,3 +1,61 @@
+#!/bin/bash
+echo "🦶 Шаг 5: Footer и Глобальные стили..."
+
+# 1. Обновляем main.scss (Добавляем шрифты и импорты)
+cat > assets/css/main.scss << 'EOF'
+@import 'variables';
+
+/* --- Import Google Fonts & Icons --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import '~bootstrap/scss/bootstrap';
+
+/* --- Layout --- */
+@import 'layout/header';
+@import 'layout/footer';
+
+/* --- Components --- */
+@import 'components/product-card';
+
+/* --- Pages --- */
+@import 'pages/homepage';
+@import 'pages/product';
+
+/* --- Global Base Styles --- */
+body {
+  font-family: 'Inter', var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+// Material Icons override
+.material-icons {
+  vertical-align: middle;
+  font-size: inherit;
+}
+EOF
+
+# 2. Создаем шаблон Footer
+cat > templates/_partials/footer.tpl << 'EOF'
 <footer class="site-footer bg-dark text-white pt-5 pb-3">
   <div class="container">
     <div class="row">
@@ -55,3 +113,55 @@
     </div>
   </div>
 </footer>
+EOF
+
+# 3. Создаем CSS для Footer
+cat > assets/css/layout/_footer.scss << 'EOF'
+.site-footer {
+  border-top: 4px solid var(--color-primary);
+  font-size: 0.9rem;
+  
+  h5 {
+    letter-spacing: 0.5px;
+    color: #fff !important;
+  }
+  
+  a {
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    &:hover {
+      color: var(--color-primary) !important;
+      transform: translateX(5px);
+    }
+  }
+  
+  .input-group {
+    .form-control {
+      border-right: none;
+      &:focus {
+        box-shadow: none;
+        border-color: var(--color-primary);
+        background-color: #212529;
+      }
+    }
+    .btn {
+      border-left: none;
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-primary-dark);
+      }
+    }
+  }
+  
+  .material-icons {
+    font-size: 1.2rem;
+  }
+}
+EOF
+
+echo "✅ Шаг 5 завершен!"
+echo " Подвал сайта и шрифты готовы."
+echo "🔨 Теперь соберите ассеты: npm run build"
+echo "🚀 И запуште: git add . && git commit -m 'feat: add footer and global typography styles' && git push"
