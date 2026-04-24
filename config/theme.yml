@@ -23,10 +23,63 @@ meta:
     layout-right-column:
       name: "Right Column"
       description: "Small right sidebar"
+
 global_settings:
   default_layout: layout-full-width
   configuration:
     PS_IMAGE_QUALITY: webp
+  image_types:
+    cart_default:
+      width: 80
+      height: 80
+      crop: true
+      format: 'default'
+    small_default:
+      width: 98
+      height: 98
+      crop: true
+      format: 'default'
+    medium_default:
+      width: 452
+      height: 452
+      crop: true
+      format: 'default'
+    large_default:
+      width: 800
+      height: 800
+      crop: true
+      format: 'default'
+    home_default:
+      width: 500
+      height: 500
+      crop: true
+      format: 'default'
+    category_default:
+      width: 300
+      height: 300
+      crop: true
+      format: 'default'
+    store_default:
+      width: 200
+      height: 200
+      crop: true
+      format: 'default'
+    manufacturer_default:
+      width: 200
+      height: 200
+      crop: false
+      format: 'default'
+    supplier_default:
+      width: 200
+      height: 200
+      crop: false
+      format: 'default'
+    product_default:
+      width: 1000
+      height: 1000
+      crop: false
+      format: 'default'
+
 modules:
   to_enable:
     - ps_mainmenu
@@ -41,6 +94,7 @@ modules:
     - ps_socialfollow
     - ps_brandlist
     - ps_supplierlist
+
 hooks:
   modules_to_unhook:
     displayHome:
