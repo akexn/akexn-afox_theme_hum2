@@ -10,6 +10,19 @@ meta:
     from: 9.0.0
     to: ~9.1.0
   framework: bootstrap-v5.3.3
+  available_layouts:
+    layout-full-width:
+      name: "Full Width"
+      description: "No side columns, ideal for product pages"
+    layout-both-columns:
+      name: "Two Columns"
+      description: "Left and right side columns"
+    layout-left-column:
+      name: "Left Column"
+      description: "Small left sidebar"
+    layout-right-column:
+      name: "Right Column"
+      description: "Small right sidebar"
 global_settings:
   default_layout: layout-full-width
   configuration:
@@ -33,13 +46,3 @@ hooks:
     displayHome:
       - ps_banner
       - ps_imageslider
-available_layouts:
-  layout-full-width:
-    name: "Full Width"
-    description: "No side columns"
-  layout-both-columns:
-    name: "Two Columns"
-    description: "Left and right columns"
-  layout-left-column:
-    name: "Left Column"
-    description: "Small left sidebar"
