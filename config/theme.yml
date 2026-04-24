@@ -34,51 +34,61 @@ global_settings:
       height: 80
       crop: true
       format: 'default'
+      scope: ['products']
     small_default:
       width: 98
       height: 98
       crop: true
       format: 'default'
+      scope: ['products', 'categories', 'manufacturers', 'suppliers', 'stores']
     medium_default:
       width: 452
       height: 452
       crop: true
       format: 'default'
+      scope: ['products']
     large_default:
       width: 800
       height: 800
       crop: true
       format: 'default'
+      scope: ['products']
     home_default:
       width: 500
       height: 500
       crop: true
       format: 'default'
+      scope: ['products']
     category_default:
       width: 300
       height: 300
       crop: true
       format: 'default'
+      scope: ['categories']
     store_default:
       width: 200
       height: 200
       crop: true
       format: 'default'
+      scope: ['stores']
     manufacturer_default:
       width: 200
       height: 200
       crop: false
       format: 'default'
+      scope: ['manufacturers']
     supplier_default:
       width: 200
       height: 200
       crop: false
       format: 'default'
+      scope: ['suppliers']
     product_default:
       width: 1000
       height: 1000
       crop: false
       format: 'default'
+      scope: ['products']
 
 modules:
   to_enable:
