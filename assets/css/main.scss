@@ -1,9 +1,15 @@
 @import 'variables';
-
-// Import Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Base styles
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/homepage';
+@import 'pages/product';
+
+// Base
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
@@ -11,8 +17,7 @@ body {
   line-height: 1.5;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+// Utility overrides
+a {
+  text-decoration: none;
 }
