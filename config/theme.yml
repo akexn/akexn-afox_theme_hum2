@@ -1,0 +1,45 @@
+name: afox_child
+display_name: "AFOX Custom Theme"
+version: 1.0.0
+parent: hummingbird
+author:
+  name: "AFOX Team"
+  email: "dev@afox.su"
+meta:
+  compatibility:
+    from: 9.0.0
+    to: ~9.1.0
+  framework: bootstrap-v5.3.3
+global_settings:
+  default_layout: layout-full-width
+  configuration:
+    PS_IMAGE_QUALITY: webp
+modules:
+  to_enable:
+    - ps_mainmenu
+    - ps_searchbar
+    - ps_contactinfo
+    - ps_linklist
+    - ps_customeraccountlinks
+    - ps_currencyselector
+    - ps_languageselector
+    - ps_shoppingcart
+  to_disable:
+    - ps_socialfollow
+    - ps_brandlist
+    - ps_supplierlist
+hooks:
+  modules_to_unhook:
+    displayHome:
+      - ps_banner
+      - ps_imageslider
+available_layouts:
+  layout-full-width:
+    name: "Full Width"
+    description: "No side columns"
+  layout-both-columns:
+    name: "Two Columns"
+    description: "Left and right columns"
+  layout-left-column:
+    name: "Left Column"
+    description: "Small left sidebar"

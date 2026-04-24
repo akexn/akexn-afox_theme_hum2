@@ -1,0 +1,23 @@
+{
+  "name": "afox_child",
+  "version": "1.0.0",
+  "description": "AFOX Custom Theme for PrestaShop 9",
+  "scripts": {
+    "build": "encore production",
+    "watch": "encore dev --watch",
+    "dev": "encore dev"
+  },
+  "dependencies": {
+    "@symfony/webpack-encore": "^4.5.0",
+    "bootstrap": "^5.3.2",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "postcss-loader": "^7.3.3",
+    "autoprefixer": "^10.4.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "webpack-notifier": "^1.15.0"
+  }
+}
