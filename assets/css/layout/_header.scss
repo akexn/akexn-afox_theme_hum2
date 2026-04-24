@@ -1,0 +1,16 @@
+/* Header styles for afox_child */
+.site-header {
+  position: relative;
+  z-index: 1000;
+  
+  .top-bar {
+    background-color: var(--color-text);
+    color: #fff;
+    font-size: 0.875rem;
+  }
+  
+  .main-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+}

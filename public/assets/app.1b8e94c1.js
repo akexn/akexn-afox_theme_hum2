@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkafox_child=self.webpackChunkafox_child||[]).push([[524],{676(e,n,t){t(336);document.addEventListener("DOMContentLoaded",function(){console.log("AFOX Child Theme Initialized")})}},e=>{e.O(0,[336,913],()=>{return n=676,e(e.s=n);var n});e.O()}]);

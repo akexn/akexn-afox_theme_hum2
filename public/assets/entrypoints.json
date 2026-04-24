@@ -1,0 +1,22 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/themes/afox_child/assets/runtime.9eceefef.js",
+        "/themes/afox_child/assets/336.993a9fcf.js",
+        "/themes/afox_child/assets/app.1b8e94c1.js"
+      ],
+      "css": [
+        "/themes/afox_child/assets/913.2590da28.css"
+      ]
+    },
+    "main": {
+      "js": [
+        "/themes/afox_child/assets/runtime.9eceefef.js"
+      ],
+      "css": [
+        "/themes/afox_child/assets/913.2590da28.css"
+      ]
+    }
+  }
+}

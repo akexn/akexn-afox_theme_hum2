@@ -1,0 +1,11 @@
+/* Footer styles for afox_child */
+.site-footer {
+  background: #1f2937;
+  color: #fff;
+  font-size: 0.9rem;
+  
+  a {
+    color: rgba(255,255,255,0.7);
+    &:hover { color: var(--color-primary); }
+  }
+}
